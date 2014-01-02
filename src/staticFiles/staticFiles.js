@@ -2,13 +2,13 @@
 /**
  * @overview Copy static files to output. Useful for tutorials
  */
-'use strict';
+"use strict";
 
-var fs = require('jsdoc/fs'),
-    pathUtil = require('jsdoc/path'),
+var fs = require("jsdoc/fs"),
+    pathUtil = require("jsdoc/path"),
     conf = env.conf.staticFiles || {},
-    filter = new (require('jsdoc/src/filter')).Filter(conf),
-    scanner = new (require('jsdoc/src/scanner')).Scanner(),
+    filter = new (require("jsdoc/src/filter")).Filter(conf),
+    scanner = new (require("jsdoc/src/scanner")).Scanner(),
     outDir = env.opts.destination,
     // `recursive` will be false by default
     recursive = conf.recursive || false,

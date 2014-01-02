@@ -44,7 +44,7 @@ Let us look at the different configuration options:
 
  * Copy the `staticFiles` directory to your JSDoc's `plugins` directory. So the plugin file will be at `<jsdoc>/plugins/staticFiles/staticFiles.js`.
 
- * Edit your JSDoc configuration file and add `plugins/jsdoc-plugins/staticFiles/staticFiles` to the `plugins` array:  
+ * Edit your JSDoc configuration file and add `plugins/staticFiles/staticFiles` to the `plugins` array:
 
         "plugins" : ["...", "plugins/jsdoc-plugins/staticFiles/staticFiles"]
 

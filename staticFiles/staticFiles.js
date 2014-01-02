@@ -4,8 +4,7 @@
  */
 'use strict';
 
-var PATH_SEPARATOR = ":",
-    fs = require('jsdoc/fs'),
+var fs = require('jsdoc/fs'),
     pathUtil = require('jsdoc/path'),
     conf = env.conf.staticFiles || {},
     filter = new (require('jsdoc/src/filter')).Filter(conf),

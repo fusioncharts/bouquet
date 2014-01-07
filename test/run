@@ -11,35 +11,32 @@ if [ -d ./tmp ]; then
 fi
 mkdir ./tmp
 
+
 # clone jsdoc repository
 git --version
+git clone https://github.com/jsdoc3/jsdoc.git ./tmp/jsdoc --depth 1
+./tmp/jsdoc/jsdoc --version
 
-# download jsdoc and extract
-wget https://github.com/jsdoc3/jsdoc/archive/v3.2.2.zip -O tmp/jsdoc.zip
-unzip tmp/jsdoc.zip -d tmp
-mv tmp/jsdoc-3.2.2 tmp/jsdoc
 
 # copy source files to jsdoc plugins folder
 mkdir ./tmp/jsdoc/plugins/bouquet
-
-./tmp/jsdoc/jsdoc --version
-
 cp -rp ./src/* ./tmp/jsdoc/plugins/bouquet
+
 
 # iterate on all conf files
 for file in test/*.conf; do
 	base=$(basename "$file" .conf)
-	echo "Processing $file..."
+	echo "Processing $base..."
 
 	# run jsdoc on conf file
-	./tmp/jsdoc/jsdoc --configure "\"$file\"" --destination "\"./tmp/out-$base\""
+	./tmp/jsdoc/jsdoc -c "$file" -d "./tmp/out-$base"
 
 	# run the spec files
-	jasmine-node ./test/ --match \"$base\.\*?\"
+	jasmine-node ./test/ -m "$base-.*"
 done
 
 
 # clear target folder at the end of the sesskon
 if [ -d ./tmp ]; then
-	rm -rf ./tmp
+    rm -rf ./tmp
 fi

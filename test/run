@@ -1,0 +1,38 @@
+# stop on first error
+set -e
+
+# lint the source files
+jshint --version
+jshint ./src/
+
+# check whether target folders are clean. If not do so.
+if [ -d ./tmp ]; then
+	rm -rf ./tmp
+fi
+mkdir ./tmp
+
+# clone jsdoc repository
+git --version
+git clone https://github.com/jsdoc3/jsdoc.git ./tmp/jsdoc --depth 1
+
+# copy source files to jsdoc plugins folder
+mkdir ./tmp/jsdoc/plugins/bouquet
+cp -rp ./src/* ./tmp/jsdoc/plugins/bouquet
+
+# iterate on all conf files
+for file in test/*.conf; do
+	base=$(basename "$file" .conf)
+	echo "Processing $file..."
+	
+	# run jsdoc on conf file
+	./tmp/jsdoc/jsdoc --conf="\"$file\"" --destination="\"./tmp/out-$base\""
+
+	# run the spec files
+	jasmine-node ./test/ --match \"$base\.\*?\"
+done
+
+
+# clear target folder at the end of the sesskon
+if [ -d ./tmp ]; then
+	rm -rf ./tmp
+fi

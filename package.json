@@ -1,9 +1,11 @@
 {
-    "name": "jsdoc-plugins",
-    "description": "Collection of useful plugins for JSDoc",
-    "version": "0.0.1",
-
-    "jshintConfig": {
+  "name": "jsdoc-plugins",
+  "description": "Collection of useful plugins for JSDoc",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "test/run"
+  },
+  "jshintConfig": {
     "bitwise": false,
     "camelcase": true,
     "curly": true,
@@ -48,5 +50,9 @@
     "devel": false,
     "node": true,
     "globals": {}
+  },
+  "devDependencies": {
+    "jshint": "~2.4.1",
+    "jasmine-node": "~1.12.0"
   }
 }

@@ -3,8 +3,5 @@ node_modules
 
 *.sublime-*
 .travis.yml
-src/bash
 
-/jslink.dot
-/out
-/tests
+/test

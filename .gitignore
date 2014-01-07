@@ -13,31 +13,10 @@
 .AppleDouble
 .LSOverride
 
-# Icon must ends with two \r.
-Icon
-
-
-# Thumbnails
-._*
-
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
 
 # Node
-# ----
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
-build
-
+# The node modules are not to be packaged with this project
 node_modules

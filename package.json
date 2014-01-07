@@ -2,9 +2,34 @@
   "name": "jsdoc-plugins",
   "description": "Collection of useful plugins for JSDoc",
   "version": "0.0.1",
+  "license": "MIT",
+
+  "author": "FusionCharts Technologies  <mail@labs.fusioncharts.com>",
+
+  "keywords": [
+    "jsdoc-plugins",
+    "jsdoc"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/kaustavdm/jsdoc-plugins.git"
+  },
+
+  "bugs": {
+    "url": "https://bitbucket.org/kaustavdm/jsdoc-plugins/issues",
+    "email": "mail@labs.fusioncharts.com"
+  },
+
   "scripts": {
     "test": "test/run"
   },
+
+  "devDependencies": {
+    "jshint": "~2.4.1",
+    "jasmine-node": "~1.12.0"
+  },
+
   "jshintConfig": {
     "bitwise": false,
     "camelcase": true,
@@ -50,9 +75,5 @@
     "devel": false,
     "node": true,
     "globals": {}
-  },
-  "devDependencies": {
-    "jshint": "~2.4.1",
-    "jasmine-node": "~1.12.0"
   }
 }

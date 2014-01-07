@@ -18,5 +18,11 @@
 .Trashes
 
 # Node
+# ----
 # The node modules are not to be packaged with this project
 node_modules
+
+# Test Waste
+# ----------
+# Files that can be left over by testing environment
+/tmp

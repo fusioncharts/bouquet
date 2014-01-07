@@ -13,11 +13,11 @@
 
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/kaustavdm/jsdoc-plugins.git"
+    "url": "https://github.com/fusioncharts/bouquet.git"
   },
 
   "bugs": {
-    "url": "https://bitbucket.org/kaustavdm/jsdoc-plugins/issues",
+    "url": "https://github.com/fusioncharts/bouquet/issues",
     "email": "mail@labs.fusioncharts.com"
   },
 

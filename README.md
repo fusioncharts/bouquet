@@ -23,8 +23,9 @@ For further information see each plugin's documentation.
 
 ## List of plugins
 
-* [__staticFiles__](src/staticFiles/README.md)  
-  Copies static files in source to generated documentation based on user-specified include paths, inclusion and exclusion patters, with support for recursive copying. [[Know more]](src/staticFiles/README.md)
+### [staticFiles](src/staticFiles)
+
+Copies static files in source to generated documentation based on user-specified include paths, inclusion and exclusion patters, with support for recursive copying. [[Know more]](src/staticFiles/README.md)
 
 ## Road ahead
 

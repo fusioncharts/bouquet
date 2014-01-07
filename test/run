@@ -13,19 +13,26 @@ mkdir ./tmp
 
 # clone jsdoc repository
 git --version
-git clone https://github.com/jsdoc3/jsdoc.git ./tmp/jsdoc --depth 1
+
+# download jsdoc and extract
+wget https://github.com/jsdoc3/jsdoc/archive/v3.2.2.zip -O tmp/jsdoc.zip
+unzip tmp/jsdoc.zip -d tmp
+mv tmp/jsdoc-3.2.2 tmp/jsdoc
 
 # copy source files to jsdoc plugins folder
 mkdir ./tmp/jsdoc/plugins/bouquet
+
+./tmp/jsdoc/jsdoc --version
+
 cp -rp ./src/* ./tmp/jsdoc/plugins/bouquet
 
 # iterate on all conf files
 for file in test/*.conf; do
 	base=$(basename "$file" .conf)
 	echo "Processing $file..."
-	
+
 	# run jsdoc on conf file
-	./tmp/jsdoc/jsdoc --conf="\"$file\"" --destination="\"./tmp/out-$base\""
+	./tmp/jsdoc/jsdoc --configure "\"$file\"" --destination "\"./tmp/out-$base\""
 
 	# run the spec files
 	jasmine-node ./test/ --match \"$base\.\*?\"

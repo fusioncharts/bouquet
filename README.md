@@ -1,3 +1,5 @@
+[![GitHub version][git-badge]](https://github.com/fusioncharts/bouquet)
+[![NPM version][npm-badge]](https://npmjs.org/package/bouquet)
 [![Build Status][travis-badge]](https://travis-ci.org/fusioncharts/bouquet)
 
 # Bouquet
@@ -36,4 +38,6 @@ Copies static files in source to generated documentation based on user-specified
  - Plugin to embed JSFiddle by supplying a fiddle URL.
  - Plugin to embed FusionCharts in tutorials and reference chart types from API.
 
+[git-badge]: https://badge.fury.io/gh/fusioncharts%2Fbouquet.png
+[npm-badge]: https://badge.fury.io/js/bouquet.png
 [travis-badge]: https://travis-ci.org/fusioncharts/bouquet.png?branch=master

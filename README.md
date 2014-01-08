@@ -1,3 +1,5 @@
+[![Build Status][travis-badge]](https://travis-ci.org/fusioncharts/bouquet)
+
 # Bouquet
 
 A collection of plugins for [JSDoc](http://usejsdoc.org), that can be readily integrated with JSDoc installations for various types of extended features.
@@ -33,3 +35,5 @@ Copies static files in source to generated documentation based on user-specified
  - Plugin to analyze documentation coverage.
  - Plugin to embed JSFiddle by supplying a fiddle URL.
  - Plugin to embed FusionCharts in tutorials and reference chart types from API.
+
+[travis-badge]: https://travis-ci.org/fusioncharts/bouquet.png?branch=master

@@ -1,3 +1,4 @@
+<a href="http://www.fusioncharts.com/"><img src="http://fusioncharts.github.io/bouquet/images/bouquet.png" alt="Bouquet logo" align="right" /></a>
 [![GitHub version][git-badge]](https://github.com/fusioncharts/bouquet)
 [![NPM version][npm-badge]](https://npmjs.org/package/bouquet)
 [![Build Status][travis-badge]](https://travis-ci.org/fusioncharts/bouquet)

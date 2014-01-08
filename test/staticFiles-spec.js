@@ -1,3 +1,4 @@
+/* global describe, it, expect */
 var fs = require("fs"),
     path = require("path"),
     CONFFILE = "./test/staticFiles.conf",
@@ -11,20 +12,20 @@ var fs = require("fs"),
  * @param {string} filepath - Path to file
  */
 var getfilesha1 = function (filepath) {
-    var shasum = require('crypto').createHash('sha1'),
+    var shasum = require("crypto").createHash("sha1"),
         file = fs.ReadStream(filepath),
         d;
 
-    file.on('data', function(d) {
-      shasum.update(d);
+    file.on("data", function(d) {
+        shasum.update(d);
     });
 
-    file.on('end', function() {
-      d = shasum.digest('hex');
+    file.on("end", function() {
+        d = shasum.digest("hex");
     });
 
     return d;
-}
+};
 
 /**
  * The test below is left here for historical reasons
@@ -84,8 +85,8 @@ describe ("output", function () {
 
     describe ("include", function () {
 
-        var includeDir = ['images', 'test/fixtures/staticFiles/css'],
-            includeFiles = ['images/1.jpg', 'test/fixtures/staticFiles/css/1.css'];
+        var includeDir = ["images", "test/fixtures/staticFiles/css"],
+            includeFiles = ["images/1.jpg", "test/fixtures/staticFiles/css/1.css"];
 
         it ("must have created directories", function () {
             includeDir.forEach (function (elem) {
@@ -110,7 +111,7 @@ describe ("output", function () {
 
     describe ("exclude", function () {
 
-        var excludeFiles = ['images/2.jpg', 'images/3.svg'];
+        var excludeFiles = ["images/2.jpg", "images/3.svg"];
 
         it ("must not have been copied", function () {
             excludeFiles.forEach (function (elem) {
@@ -121,8 +122,8 @@ describe ("output", function () {
 
     describe ("recursive", function () {
 
-        var recursiveInclude = ['images/level1/1.jpg', 'images/level1/level2/1.jpg'],
-            recursiveExclude = ['images/level1/level2/level3/1.jpg'];
+        var recursiveInclude = ["images/level1/1.jpg", "images/level1/level2/1.jpg"],
+            recursiveExclude = ["images/level1/level2/level3/1.jpg"];
 
         it ("must have been recursively copied", function () {
             recursiveInclude.forEach (function (elem) {

@@ -24,7 +24,7 @@ Let us look at the different configuration options:
  * __include__: It is the primary configuration option for specifying the folders to copy. It is an array where the source paths are specified as strings.
 
     A special format can be used to specify different source and destination paths, where the path is written as "destination:source", separated by a colon. e.g. if the source is `tutorials/images`, but the output destination needs to be `images`, then the string has to be written as `"images:tutorials/images"`.
-    
+
     Since this option is a array, multiple separate include paths can be specified, delimited by a comma.
 
  * __exclude__: An array of files in the included source folders that should be excluded.
@@ -38,7 +38,7 @@ Let us look at the different configuration options:
  * __recursive__: If true, the source folders will be recursively copied. Defaults to `false`.
 
  * __recurseLevel__: If `recursive` is `true`, this provides the depth of levels that the recursion should go. This is `3` by default.
- 
+
 
 ## How to use
 

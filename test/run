@@ -4,6 +4,7 @@ set -e
 # lint the source files
 jshint --version
 jshint ./src/
+jshint ./test/*.js
 
 # check whether target folders are clean. If not do so.
 if [ -d ./tmp ]; then

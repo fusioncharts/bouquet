@@ -34,7 +34,7 @@ var splitInclude = function (paths) {
         // The `match()` method returns an array in which the first item is the string being matched,
         // the second item is the destination and the third item is the source.
         // If user provides a string without colons, then the entire path becomes the source, and
-        // the destination becomes the same as source. i.e. the same folder structure is created 
+        // the destination becomes the same as source. i.e. the same folder structure is created
         // in the destination.
         (path = path && path.match && path.match(/^([^\:]*?)\:?([^\:]+)$/)) && output.push({
             source: path[2],

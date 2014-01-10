@@ -19,7 +19,7 @@ Each plugin in Bouquet is contained in a separate directory within the `src` dir
  - Copy plugin directory from `src` directory to the `plugins` directory in JSDoc's installation directory.
  - Edit JSDoc's conf file and add path to the plugin in the `plugins` array. For example, if you want to use the _staticFiles_ plugin and have copied `src/staticFiles` to JSDoc's `plugins/staticFiles` directory, then your plugins array would contain:
 
-         "plugins": ["plugins/staticFiles/staticFiles"],
+         "plugins": ["plugins/staticFiles/staticFiles"]
 
  - Put in plugin specific configuration in JSDoc's conf file. Each plugin's configuration options are provided in a `README.md` within the plugin specific folder.
  - You are all set!

@@ -1,7 +1,7 @@
 {
   "name": "bouquet",
   "description": "Collection of useful plugins for JSDoc",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
 
   "author": "FusionCharts Technologies  <mail@labs.fusioncharts.com>",

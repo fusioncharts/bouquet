@@ -5,26 +5,24 @@
 
 # Bouquet
 
-A collection of plugins for [JSDoc](http://usejsdoc.org), that can be readily integrated with JSDoc installations for various types of extended features.
+A collection of plugins for [JSDoc](http://usejsdoc.org), that can be readily integrated with JSDoc installations to extend the functionalities of JSDoc.
 
 ## Why Bouquet?
 
-Often we need to extend JSDoc to support various use cases. But those plugins are not properly packaged and presented to the world. Bouquet is an effort to provide a unified collection of various useful plugins which a user can use with JSDoc.
+Often we need to extend JSDoc to support different use cases that are not satisfied by JSDoc. JSDoc exposes a plugins architecture that can be used to address those use cases, without hacking on the core JSDoc files. [Bouquet](https://github.com/fusioncharts/bouquet) is an effort to provide a unified collection of useful plugins for use with JSDoc.
 
 ## How to use Bouquet?
 
-To use Bouquet, you have to use the plugins that ship with Bouquet. Each plugin is contained in a separate directory with the `src` directory. Generic instruction for using a Bouquet plugin is:
+Each plugin in Bouquet is contained in a separate directory within the `src` directory. Generic instruction for using a Bouquet plugin is:
 
  - Clone the Bouquet repository.
- - Copy plugin directory from `src` directory to JSDoc's `plugins` directory.
+ - Copy plugin directory from `src` directory to the `plugins` directory in JSDoc's installation directory.
  - Edit JSDoc's conf file and add path to the plugin in the `plugins` array. For example, if you want to use the _staticFiles_ plugin and have copied `src/staticFiles` to JSDoc's `plugins/staticFiles` directory, then your plugins array would contain:
 
          "plugins": ["plugins/staticFiles/staticFiles"],
 
- - Put in plugin specific configuration in JSDoc's conf file.
+ - Put in plugin specific configuration in JSDoc's conf file. Each plugin's configuration options are provided in a `README.md` within the plugin specific folder.
  - You are all set!
-
-For further information see each plugin's documentation.
 
 ## List of plugins
 

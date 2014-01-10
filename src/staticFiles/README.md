@@ -50,7 +50,7 @@ Parameter        | Description
 `includePattern` | Within the included folders, only files that match this regex pattern will be included.
 `excludePattern` | Within the included folders, the files matching this pattern will be always excluded. This will take precedence over `includePattern`.
 `recursive`      | If true, the source folders will be recursively copied. Defaults to `false`.
-`recurselevel`   | If `recursive` is `true`, this provides the depth of levels that the recursion should go. This is `3` by default.
+`recurseLevel`   | If `recursive` is `true`, this provides the depth of levels that the recursion should go. This is `3` by default.
 
 
 [link-jsdoc-config]: http://usejsdoc.org/about-configuring-jsdoc.html

@@ -72,8 +72,8 @@ exports.handlers = {
                 // Iterate over each of the filtered paths available and copy them to destination
                 filteredList.forEach( function(currentPath) {
                     // Generate source path
-                    srcPath = fs.statSync(elem.source).isDirectory() ? elem.source :
-                        pathUtil.dirname(elem.source);
+                    srcPath = fs.statSync(elem.source).isDirectory() ? pathUtil.normalize(elem.source) :
+                        pathUtil.normalize(pathUtil.dirname(elem.source));
                     // Prepare directory path for destination
                     toDir = fs.toDir(currentPath.replace(srcPath, destPath));
                     // Create destination directory

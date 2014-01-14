@@ -47,6 +47,22 @@ var splitInclude = function (paths) {
     return output;
 };
 
+/**
+ * Generate source path to directory based on whether it is absolute path or relative path
+ *
+ * @param {string} src - Path to the current source
+ * @returns {string} Path to the resolved directory
+ */
+var generateSrcPath = function (src) {
+
+    // If `src` is an absolute path, join it with "/" which will negate any prefix added.
+    // Else if it is a relative path, join it with `env.pwd`.
+    // In either case, if `src` is a directory, use it directly as the second parameter to join,
+    // or find its directory name using `pathUtil.dirname()`.
+    return pathUtil.join((/^\//).test(src) ? "/" : env.pwd,
+        fs.statSync(src).isDirectory() ? src : pathUtil.dirname(src));
+};
+
 exports.handlers = {
 
     /**
@@ -72,8 +88,7 @@ exports.handlers = {
                 // Iterate over each of the filtered paths available and copy them to destination
                 filteredList.forEach( function(currentPath) {
                     // Generate source path
-                    srcPath = fs.statSync(elem.source).isDirectory() ? pathUtil.normalize(elem.source) :
-                        pathUtil.normalize(pathUtil.dirname(elem.source));
+                    srcPath = generateSrcPath(elem.source);
                     // Prepare directory path for destination
                     toDir = fs.toDir(currentPath.replace(srcPath, destPath));
                     // Create destination directory

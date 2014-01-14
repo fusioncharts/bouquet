@@ -5,11 +5,13 @@
 
 # Bouquet
 
-A collection of plugins for [JSDoc](http://usejsdoc.org), that can be readily integrated with JSDoc installations to extend the functionalities of JSDoc.
+A collection of plugins for [JSDoc](http://usejsdoc.org), that can be readily integrated with JSDoc installations to extend the functionalities of JSDoc without editing the core of JSDoc.
 
 ## Why Bouquet?
 
-Often we need to extend JSDoc to support different use cases that are not satisfied by JSDoc. JSDoc exposes a plugins architecture that can be used to address those use cases, without hacking on the core JSDoc files. [Bouquet](https://github.com/fusioncharts/bouquet) is an effort to provide a unified collection of useful plugins for use with JSDoc.
+Often we need to extend JSDoc to support different use cases that are not satisfied by JSDoc. For example, someone might need to include additional files in their documentation, or parse additional directives.
+
+JSDoc exposes a plugins architecture that can be used to address those use cases, without hacking on the core JSDoc files. [Bouquet](https://github.com/fusioncharts/bouquet) is an effort to provide a unified collection of such useful plugins for use with JSDoc.
 
 ## How to use Bouquet?
 
@@ -32,6 +34,7 @@ Copies static files in source to generated documentation based on user-specified
 
 ## Road ahead
 
+ - Plugin to re-order, rename and include custom menu items in JSDoc.
  - Plugin for global search.
  - Plugin to analyze documentation coverage.
  - Plugin to embed JSFiddle by supplying a fiddle URL.

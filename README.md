@@ -43,3 +43,5 @@ Copies static files in source to generated documentation based on user-specified
 [git-badge]: https://badge.fury.io/gh/fusioncharts%2Fbouquet.png
 [npm-badge]: https://badge.fury.io/js/bouquet.png
 [travis-badge]: https://travis-ci.org/fusioncharts/bouquet.png?branch=master
+
+[![Analytics](https://ga-beacon.appspot.com/UA-45124206-2/bouquet/index)](https://github.com/igrigorik/ga-beacon)

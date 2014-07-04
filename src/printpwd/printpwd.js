@@ -4,7 +4,7 @@
  */
 
 exports.handlers = {
-    parseBegin: function (e) {
+    parseBegin: function () {
         console.log("\nJSDoc is being run from: " + process.env.PWD + "\n");
     }
 };

@@ -1,10 +1,10 @@
 {
   "name": "bouquet",
   "description": "Collection of useful plugins for JSDoc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
 
-  "author": "FusionCharts Technologies  <mail@labs.fusioncharts.com>",
+  "author": "InfoSoft Global Pvt. Ltd.  <mail@labs.fusioncharts.com>",
 
   "keywords": [
     "jsdoc-plugins",
